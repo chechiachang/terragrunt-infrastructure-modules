@@ -1,7 +1,7 @@
 # https://github.com/terraform-aws-modules/terraform-aws-iam/tree/master/modules/iam-group-with-policies
 
 module "iam_group_with_policies_full_access" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
+  source = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
 
   name = "full-access"
 
@@ -27,7 +27,7 @@ module "iam_group_with_policies_full_access" {
 }
 
 module "iam_group_with_policies_billing" {
-  source  = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
+  source = "terraform-aws-modules/iam/aws//modules/iam-group-with-policies"
 
   name = "billing"
 
