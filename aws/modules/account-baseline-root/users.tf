@@ -5,7 +5,7 @@ module "iam_user" {
   for_each = var.users
 
   name          = each.key
-  force_destroy = true
+  force_destroy = false
 
   create_iam_user_login_profile = each.value.create_login_profile
   create_iam_access_key         = each.value.create_access_keys
