@@ -15,21 +15,21 @@ output "keybase_password_decrypt_command" {
 
 output "iam_access_key_id" {
   description = "The access key ID"
-  value       =  {
+  value = {
     for key, value in module.iam_user : key => value.iam_access_key_id
   }
 }
 
 output "keybase_secret_key_decrypt_command" {
   description = "Decrypt access secret key command"
-  value       = {
-     for key, value in module.iam_user : key => value.keybase_secret_key_decrypt_command
+  value = {
+    for key, value in module.iam_user : key => value.keybase_secret_key_decrypt_command
   }
 }
 
 output "keybase_secret_key_pgp_message" {
   description = "Encrypted access secret key"
-  value       = {
-     for key, value in module.iam_user : key => value.keybase_secret_key_pgp_message
+  value = {
+    for key, value in module.iam_user : key => value.keybase_secret_key_pgp_message
   }
 }
