@@ -1,26 +1,11 @@
 repos:
-  - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.12 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+  - repo: git@github.maicoin.site:maiami/pre-commit.git # fork from https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.16 # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
     hooks:
       - id: terraform-fmt
-      - id: terraform-validate
-      - id: tflint
+      #- id: terraform-validate
+      - id: terragrunt-hclfmt
+      #- id: tflint
       - id: shellcheck
-      - id: gofmt
-      - id: golint
-
-  - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.75.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
-    hooks:
-      #- id: terraform_fmt
-      #- id: terraform_checkov
-      #  args:
-      #    - --args=--skip-check CKV_SECRET_6 # FIXME false alarm on non-secret string
-      #- id: terraform_docs
-      #- id: terragrunt_validate
-      #- id: terrascan
-      #- id: terraform_tflint
-      #- id: terraform_tfsec
-      - id: infracost_breakdown
-      #- id: tfupdate
-      #- id: terraform_wrapper_module_for_each
+      #- id: gofmt
+      #- id: golint

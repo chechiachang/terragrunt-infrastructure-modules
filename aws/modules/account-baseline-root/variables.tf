@@ -20,13 +20,13 @@ variable "users" {
 # password policy
 
 variable "minimum_password_length" {
-  type = number
+  type        = number
   description = "The number of days that an user password is valid."
-  default = 32
+  default     = 32
 }
 
 variable "max_password_age" {
-  type = number
+  type        = number
   description = "Minimum length to require for user passwords."
-  default = 90
+  default     = 90
 }
